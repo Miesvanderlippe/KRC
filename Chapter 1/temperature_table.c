@@ -1,33 +1,24 @@
 #include <stdio.h>
 
+# define MIN 0
+# define MAX 300
+# define STEP 20
+
 int main(void)
 {
-    int min, max, step; 
-    float fahrenheit, celcius; 
-
-    min = 0;
-    max = 300;
-    step = 20;
-
-    fahrenheit = min;
+    int fahrenheit, celcius; 
 
     printf("===== Fahrenheit to Celcius ===== \n");
 
-    while(fahrenheit <= max)
+    for(fahrenheit = MAX; fahrenheit >= MIN; fahrenheit = fahrenheit - STEP)
     {
-        celcius = (5.0 / 9.0) * (fahrenheit - 32.0);
-        printf("%3.0f\t%6.1f\n", fahrenheit, celcius);
-        fahrenheit = fahrenheit + step;
+        printf("%d\t%6.1f\n", fahrenheit, (5.0 / 9.0) * (fahrenheit - 32.0));
     }
-
-    celcius = min;
 
     printf("\n===== Celcius to Fahrenheit ===== \n");
 
-    while(celcius <= max)
+    for(celcius = MAX; celcius >= MIN; celcius = celcius - STEP)
     {
-        fahrenheit = (celcius / (5.0 / 9.0)) + 32 ;
-        printf("%3.0f\t%6.1f\n", celcius, fahrenheit);
-        celcius = celcius + step;
+        printf("%d\t%6.1f\n", celcius, (celcius / (5.0 / 9.0)) + 32);
     }
 }
