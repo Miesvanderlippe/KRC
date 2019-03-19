@@ -3,6 +3,7 @@ the linecounter
 and the wordcounter  
 and     the space   deduplicator
 Here's a tab	tab
+Here's a backs \ slash
 
 That's an empty line
 This document ends with a newline. 
